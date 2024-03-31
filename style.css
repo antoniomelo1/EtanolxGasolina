@@ -84,3 +84,30 @@ button:hover {
 .resultado-igual {
   background-color: #f39c12; /* Laranja */
 }
+
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  max-width: 400px; /* ajuste conforme necessário */
+  margin: 0 auto; /* centralize na página */
+}
+
+.card header {
+  margin-bottom: 20px;
+}
+
+.card h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+}
+#img {
+  border-radius: 10px;
+}
+
