@@ -10,15 +10,19 @@ body {
 }
 
 .container {
-  background-color: #fff;
+  background-color: #05ccae;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  max-width: 400px; /* Defina uma largura máxima para o layout */
+  margin: 0 auto; /* Centralize o layout na tela */
 }
 
 input[type="number"] {
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
+  display: block;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
@@ -42,4 +46,41 @@ button:hover {
   font-size: 18px;
   font-weight: bold;
   margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  input[type="number"] {
+    width: calc(100% - 20px);
+    margin-bottom: 5px;
+  }
+  
+  button {
+    padding: 8px 16px;
+  }
+}
+
+.resultado {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.resultado-etanol {
+  background-color: #2ecc71; /* Verde */
+}
+
+.resultado-gasolina {
+  background-color: #e74c3c; /* Vermelho */
+}
+
+.resultado-igual {
+  background-color: #f39c12; /* Laranja */
 }
