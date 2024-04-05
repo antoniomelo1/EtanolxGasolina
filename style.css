@@ -15,8 +15,8 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  max-width: 400px; /* Defina uma largura máxima para o layout */
-  margin: 0 auto; /* Centralize o layout na tela */
+  max-width: 400px; 
+  margin: 0 auto; 
 }
 
 input[type="number"] {
@@ -74,15 +74,15 @@ button:hover {
 }
 
 .resultado-etanol {
-  background-color: #2ecc71; /* Verde */
+  background-color: #2ecc71; 
 }
 
 .resultado-gasolina {
-  background-color: #e74c3c; /* Vermelho */
+  background-color: #e74c3c; 
 }
 
 .resultado-igual {
-  background-color: #f39c12; /* Laranja */
+  background-color: #f39c12; 
 }
 
 .card {
@@ -91,8 +91,8 @@ button:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
-  max-width: 400px; /* ajuste conforme necessário */
-  margin: 0 auto; /* centralize na página */
+  max-width: 400px; 
+  margin: 0 auto; 
 }
 
 .card header {
@@ -111,3 +111,31 @@ button:hover {
   border-radius: 10px;
 }
 
+#historicoTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#historicoTable th,
+#historicoTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+#historicoTable th {
+  background-color: #f2f2f2;
+}
+
+#historicoTable tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#historicoTable tbody tr:hover {
+  background-color: #ddd;
+}
+
+#historicoTable:empty {
+  display: none;
+}
