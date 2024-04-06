@@ -141,3 +141,11 @@ button:hover {
   display: none;
 }
 
+/* Estilos para a tabela de histórico em telas menores */
+@media screen and (max-width: 600px) {
+  #historicoTable {
+    overflow-x: auto; /* Adiciona uma barra de rolagem horizontal */
+    display: block; /* Muda a exibição para bloco para que a largura 100% funcione corretamente */
+  }
+}
+
