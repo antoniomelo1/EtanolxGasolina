@@ -81,6 +81,9 @@ button:hover {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  display: flex; /* Added display flex */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
 }
 
 #historicoTable th,
