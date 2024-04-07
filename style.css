@@ -84,8 +84,8 @@ button:hover {
 }
 
 #historicoTable {
-  width: 80%;
-  font-size: 10px;
+  width: 90%;
+  font-size: 12px;
   border-collapse: collapse;
   margin: 0 auto;
   margin-top: 20px;
@@ -95,7 +95,7 @@ button:hover {
 #historicoTable th,
 #historicoTable td {
   border: 1px solid #ddd;
-  padding: 5px;
+  padding: 3px;
   text-align: left;
 }
 .historico {
@@ -120,7 +120,7 @@ button:hover {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 427px) {
   .container {
     padding: 10px;
   }
