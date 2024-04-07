@@ -46,12 +46,3 @@ function exibirHistorico() {
         row.insertCell(4).innerText = item.diferenca.toFixed(2);
     });
 }
-
-
-
-
-
-
-
-
-  

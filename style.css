@@ -1,5 +1,3 @@
-/* General styles */
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -13,9 +11,9 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  max-width: 100%; /* Adjusted to 100% */
-  margin: 0 auto; /* Center align */
-  overflow-x: hidden; /* Prevent horizontal scrolling on small screens */
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 
 input[type="number"] {
@@ -48,14 +46,24 @@ button:hover {
   padding: 10px;
   border-radius: 5px;
 }
+.resultado-etanol {
+  background-color: #2ecc71;
+}
 
+.resultado-gasolina {
+  background-color: #e74c3c;
+}
+
+.resultado-igual {
+  background-color: #f39c12;
+}
 .card {
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
-  margin-bottom: 20px; /* Added margin-bottom */
+  margin-bottom: 20px;
 }
 
 .card header {
@@ -75,25 +83,27 @@ button:hover {
   border-radius: 10px;
 }
 
-/* Table styles */
-
 #historicoTable {
-  width: 100%;
+  width: 80%;
+  font-size: 14px;
   border-collapse: collapse;
-  margin-top: 20px;
-  display: flex; /* Added display flex */
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
   margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #historicoTable th,
 #historicoTable td {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 5px;
   text-align: left;
 }
-
+.historico {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: auto;
+}
 #historicoTable th {
   background-color: #f2f2f2;
 }
@@ -110,11 +120,9 @@ button:hover {
   display: none;
 }
 
-/* Responsive styles for smaller screens */
-
 @media screen and (max-width: 600px) {
   .container {
-    padding: 10px; /* Adjusted padding */
+    padding: 10px;
   }
 
   input[type="number"] {
@@ -127,6 +135,6 @@ button:hover {
   }
 
   #historicoTable {
-    overflow-x: auto; /* Add horizontal scroll for smaller screens */
+    overflow-x: auto;
   }
 }
