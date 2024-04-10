@@ -35,7 +35,19 @@
             </thead>
             <tbody id="historicoBody"></tbody>
           </table>
-          
+          <label for="precoGasolina">Preço do Combustível (R$ por litro):</label>
+          <input type="number" id="precoGasolina">
+          <label for="distancia">Distância da Viagem (km):</label>
+          <input type="number" id="distancia">
+          <label for="consumoRodovia">Consumo de Combustível na Rodovia (km/l):</label>
+          <input type="number" id="consumoRodovia">
+          <label for="consumoUrbano">Consumo de Combustível na Área Urbana (km/l):</label>
+          <input type="number" id="consumoUrbano">
+          <!--<button onclick="calcularCustoViagem()">Calcular Custo da Viagem</button>
+          <button onclick="calcularCustoViagem()">Calcular Custo Total da Viagem</button>-->
+          <button onclick="calcularCustoViagemRodovia()">Calcular Custo apenas na Rodovia</button>
+          <button onclick="calcularCustoViagemUrbana()">Calcular Custo apenas na Área Urbana</button>
+          <p id="custoViagem" class="resulta"></p>
         <footer>
             <p>&copy; 2023 ComparaCombus. Todos os direitos reservados. Contato: antoniorodriguesmelo200@gmail.com</p>
           </footer>

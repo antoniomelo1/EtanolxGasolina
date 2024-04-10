@@ -46,3 +46,64 @@ function exibirHistorico() {
         row.insertCell(4).innerText = item.diferenca.toFixed(2);
     });
 }
+
+function calcularCustoViagem() {
+    var precoGasolina = parseFloat(document.getElementById('precoGasolina').value);
+    var distancia = parseFloat(document.getElementById('distancia').value);
+    var consumoRodovia = parseFloat(document.getElementById('consumoRodovia').value);
+    var consumoUrbano = parseFloat(document.getElementById('consumoUrbano').value);
+
+    if (isNaN(precoGasolina) || isNaN(distancia) || isNaN(consumoRodovia) || isNaN(consumoUrbano)) {
+        alert("Por favor, preencha todos os campos corretamente.");
+        return;
+    }
+
+    var consumoTotalRodovia = (distancia / consumoRodovia);
+    var consumoTotalUrbano = (distancia / consumoUrbano);
+
+    var custoTotalRodovia = consumoTotalRodovia * precoGasolina;
+    var custoTotalUrbano = consumoTotalUrbano * precoGasolina;
+
+    var custoViagemElement = document.getElementById('custoViagem');
+    custoViagemElement.innerHTML = 'Custo Total da Viagem (Rodovia): R$ ' + custoTotalRodovia.toFixed(2) + '<br>' +
+                                    'Custo Total da Viagem (Área Urbana): R$ ' + custoTotalUrbano.toFixed(2);
+    custoViagemElement.className = 'resulta';
+}
+
+function calcularCustoViagemRodovia() {
+    var precoGasolina = parseFloat(document.getElementById('precoGasolina').value);
+    var distancia = parseFloat(document.getElementById('distancia').value);
+    var consumoRodovia = parseFloat(document.getElementById('consumoRodovia').value);
+
+    if (isNaN(precoGasolina) || isNaN(distancia) || isNaN(consumoRodovia)) {
+        alert("Por favor, preencha todos os campos corretamente.");
+        return;
+    }
+
+    var consumoTotalRodovia = (distancia / consumoRodovia);
+    var custoTotalRodovia = consumoTotalRodovia * precoGasolina;
+
+    var custoViagemElement = document.getElementById('custoViagem');
+    custoViagemElement.innerHTML = 'Custo Total da Viagem (Rodovia): R$ ' + custoTotalRodovia.toFixed(2);
+    custoViagemElement.className = 'resulta';
+}
+
+function calcularCustoViagemUrbana() {
+    var precoGasolina = parseFloat(document.getElementById('precoGasolina').value);
+    var distancia = parseFloat(document.getElementById('distancia').value);
+    var consumoUrbano = parseFloat(document.getElementById('consumoUrbano').value);
+
+    if (isNaN(precoGasolina) || isNaN(distancia) || isNaN(consumoUrbano)) {
+        alert("Por favor, preencha todos os campos corretamente.");
+        return;
+    }
+
+    var consumoTotalUrbano = (distancia / consumoUrbano);
+    var custoTotalUrbano = consumoTotalUrbano * precoGasolina;
+
+    var custoViagemElement = document.getElementById('custoViagem');
+    custoViagemElement.innerHTML = 'Custo Total da Viagem (Área Urbana): R$ ' + custoTotalUrbano.toFixed(2);
+    custoViagemElement.className = 'resulta';
+}
+
+
