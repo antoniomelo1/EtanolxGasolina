@@ -1,56 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comparador Etanol vs Gasolina</title>
-    <script src="script.js"></script>
+    <title>ComparaCombus</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
-        <img src="./imagem/bomba1.png" alt="Ilustação" width="200" id="img">
-        <div class="card">
-            <header>
-                <h1>Calcule a Melhor Opção</h1>
-                <p>Insira os preços do Etanol e da Gasolina para descobrir qual combustível é mais vantajoso abastecer!</p>
-            </header>
-        </div>        
-        <label for="etanol">Preço do Etanol (R$):</label>
-        <input type="number" id="etanol">
-        <label for="gasolina">Preço da Gasolina (R$):</label>
-        <input type="number" id="gasolina">
-        <button onclick="calcular()">Calcular</button>
-        <p id="resultado" class="resultado"></p>
-        <div id="historico" class="historico"></div>
-        <table id="historicoTable">
-            <thead>
-              <tr>
-                <th>Cálculo</th>
-                <th>Preço Etanol (R$)</th>
-                <th>Preço Gasolina (R$)</th>
-                <th>Resultado</th>
-                <th>Diferença (R$/litro)</th>
-              </tr>
-            </thead>
-            <tbody id="historicoBody"></tbody>
-          </table>
-          <label for="precoGasolina">Preço do Combustível (R$ por litro):</label>
-          <input type="number" id="precoGasolina">
-          <label for="distancia">Distância da Viagem (km):</label>
-          <input type="number" id="distancia">
-          <label for="consumoRodovia">Consumo de Combustível na Rodovia (km/l):</label>
-          <input type="number" id="consumoRodovia">
-          <label for="consumoUrbano">Consumo de Combustível na Área Urbana (km/l):</label>
-          <input type="number" id="consumoUrbano">
-          <!--<button onclick="calcularCustoViagem()">Calcular Custo da Viagem</button>
-          <button onclick="calcularCustoViagem()">Calcular Custo Total da Viagem</button>-->
-          <button onclick="calcularCustoViagemRodovia()">Calcular Custo apenas na Rodovia</button>
-          <button onclick="calcularCustoViagemUrbana()">Calcular Custo apenas na Área Urbana</button>
-          <p id="custoViagem" class="resulta"></p>
+        <header>
+            <img src="./imagem/bomba1.png" alt="Logo ComparaCombus" class="logo">
+            <h1>Comparador de Combustíveis</h1>
+            <p><button onclick="window.location.href='tutorial.html'" class="tutorial-button">Tutorial</button></p>
+        </header>
+        <section>
+            <h2>Comparação de Preços</h2>
+            <form id="comparison-form">
+                <label for="ethanol-price">Preço do Etanol (R$):</label>
+                <input type="number" id="ethanol-price" name="ethanol-price" required>
+                <label for="gasoline-price">Preço da Gasolina (R$):</label>
+                <input type="number" id="gasoline-price" name="gasoline-price" required>
+                <button type="button" onclick="calcular()">Calcular</button>
+            </form>
+            <p id="resultado"></p>
+            <table id="resultado-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Etanol (R$)</th>
+                        <th>Gasolina (R$)</th>
+                        <th>Resultado</th>
+                        <th>Diferença (R$)</th>
+                    </tr>
+                </thead>
+                <tbody id="historicoBody">
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Cálculo do Custo de Viagem</h2>
+            <form id="trip-cost-form">
+                <label for="precoGasolinaRodovia">Preço do Combustível (R$):</label>
+                <input type="number" id="precoGasolinaRodovia" name="precoGasolinaRodovia" required>
+                <label for="distanciaRodovia">Distância da Viagem (km):</label>
+                <input type="number" id="distanciaRodovia" name="distanciaRodovia" required>
+                <label for="consumoRodovia">Consumo Médio (km/L):</label>
+                <input type="number" id="consumoRodovia" name="consumoRodovia" required>
+                <label for="pedagio">Custo dos Pedágios (R$):</label>
+                <input type="number" id="pedagio" name="pedagio">
+                <button type="button" onclick="calcularCustoViagemRodovia()">Calcular</button>
+            </form>
+            <p id="custoViagemRodovia"></p>
+        </section>
+        <section>
+            <h2>Cálculo de Consumo Urbano</h2>
+            <form id="urban-consumption-form">
+                <label for="precoGasolinaUrbano">Preço do Combustível (R$):</label>
+                <input type="number" id="precoGasolinaUrbano" name="precoGasolinaUrbano" required>
+                <label for="distanciaUrbano">Distância Percorrida (km):</label>
+                <input type="number" id="distanciaUrbano" name="distanciaUrbano" required>
+                <label for="consumoUrbano">Consumo Médio (km/L):</label>
+                <input type="number" id="consumoUrbano" name="consumoUrbano" required>
+                <button type="button" onclick="calcularCustoViagemUrbana()">Calcular</button>
+            </form>
+            <p id="custoViagemUrbana"></p>
+        </section>
+        <section>
+            <h2>Feedback</h2>
+            <form id="feedback-form">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="feedback">Mensagem:</label>
+                <textarea id="feedback" name="feedback" required></textarea>
+                <button type="button" onclick="enviarFeedback()">Enviar</button>
+            </form>
+            <p id="mensagemFeedback"></p>
+        </section>
+        <section>
+            <h2>Mapa de Postos</h2>
+            <h4>Função em fase de implementação</h4>
+            <div id="map"></div>
+        </section>
         <footer>
-            <p>&copy; 2023 ComparaCombus. Todos os direitos reservados. Contato: antoniorodriguesmelo200@gmail.com</p>
-          </footer>
+            <p>&copy; 2023 Produzido por: Antonio Melo. Todos os direitos reservados. Contato: antoniorodriguesmelo200@gmail.com</p>
+        </footer>
     </div>
 </body>
 </html>

@@ -1,177 +1,188 @@
-body {
-  font-family: Arial, sans-serif;
+* {
   margin: 0;
   padding: 0;
-  background-color: #f2f2f2;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #e7f0ff;
+  padding: 20px;
 }
 
 .container {
-  background-color: #05ccae;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  max-width: 100%;
-  margin: 0 auto;
-  overflow-x: hidden;
 }
 
-input[type="number"] {
-  width: 80%;
-  margin: 0 auto;
-  display: block;
-  padding: 10px;
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header .logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  color: #333;
   margin-bottom: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
 }
 
-button {
+header p {
+  margin-top: 10px;
+}
+
+.tutorial-button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #28a745;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
-button:hover {
-  background-color: #0056b3;
+.tutorial-button:hover {
+  background-color: #218838;
 }
 
-.resultado {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 20px;
-  padding: 10px;
-  border-radius: 5px;
-}
-.resultado-etanol {
-  background-color: #2ecc71;
-}
-
-.resultado-gasolina {
-  background-color: #e74c3c;
-}
-
-.resultado-igual {
-  background-color: #f39c12;
-}
-.card {
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
+section {
   margin-bottom: 20px;
 }
 
-.card header {
-  margin-bottom: 20px;
-}
-
-.card h1 {
-  font-size: 24px;
+section h2 {
+  font-size: 1.8rem;
+  color: #333;
   margin-bottom: 10px;
 }
 
-.card p {
-  font-size: 16px;
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-#img {
-  border-radius: 10px;
-}
-
-#historicoTable {
-  width: 90%;
-  font-size: 12px;
-  border-collapse: collapse;
-  margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-#historicoTable th,
-#historicoTable td {
-  border: 1px solid #ddd;
-  padding: 3px;
+form label {
+  font-size: 1rem;
+  color: #333;
+  margin: 10px 0 5px;
+  width: 100%;
+  max-width: 400px;
   text-align: left;
 }
-.historico {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: auto;
-}
-#historicoTable th {
-  background-color: #f2f2f2;
-}
 
-#historicoTable tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-#historicoTable tbody tr:hover {
-  background-color: #ddd;
-}
-
-#historicoTable:empty {
-  display: none;
-}
-
-@media screen and (max-width: 427px) {
-  .container {
-    padding: 10px;
-  }
-
-  input[type="number"] {
-    width: calc(100% - 20px);
-    margin-bottom: 5px;
-  }
-
-  button {
-    padding: 8px 16px;
-  }
-
-  #historicoTable {
-    overflow-x: auto;
-  }
-}
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 16px;
-}
-
-input[type="number"] {
-  width: 80%;
-  margin: 0 auto;
-  display: block;
-  padding: 8px;
+form input, form textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
   margin-bottom: 10px;
-  border-radius: 5px;
   border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-button {
+form button {
   padding: 10px 20px;
   background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 10px;
+  width: 100%;
+  max-width: 400px;
 }
 
-button:hover {
+form button:hover {
   background-color: #0056b3;
 }
 
-.resulta {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 20px;
+#map {
+  width: 100%;
+  height: 400px;
+  background-color: #eaeaea;
+  margin-top: 10px;
+}
+
+table {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
   padding: 10px;
-  border-radius: 5px;
+  text-align: center;
+  font-size: 12;
+}
+
+table th {
+  background-color: #f4f4f4;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  body {
+      padding: 10px;
+  }
+  header h1 {
+      font-size: 1.8rem;
+  }
+  section h2 {
+      font-size: 1.6rem;
+  }
+  form label {
+      font-size: 0.9rem;
+  }
+  form input, form textarea, form button {
+      max-width: 100%;
+  }
+  table {
+      width: 100%;
+  }
+
+  #map {
+      height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+      font-size: 1.5rem;
+  }
+  section h2 {
+      font-size: 1.4rem;
+  }
+  form label {
+      font-size: 0.8rem;
+  }
+  form button {
+      width: 100%;
+  }
+  #map {
+      height: 250px;
+  }
 }
