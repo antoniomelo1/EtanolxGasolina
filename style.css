@@ -5,9 +5,9 @@
 }
 
 body {
+  background: linear-gradient(90deg, rgba(109, 173, 215,1) 0%, rgba(144, 90, 173,1) 100%);
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #e7f0ff;
   padding: 20px;
 }
 
