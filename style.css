@@ -9,7 +9,6 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   padding: 20px;
-  color: #333;
 }
 
 .container {
@@ -35,12 +34,11 @@ header .logo {
 
 header h1 {
   font-size: 2.2rem;
-  color: #fff;
+  color: #333;
   margin-bottom: 10px;
 }
 
 header p {
-  color: #f8f9fa;
   margin-top: 10px;
 }
 
@@ -61,10 +59,6 @@ header p {
 
 section {
   margin-bottom: 20px;
-  background-color: #f8f9fa; /* Fundo cinza claro para as seções */
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
@@ -78,11 +72,6 @@ form {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background-color: #fff; /* Fundo branco para os formulários */
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
 }
 
 form label {
