@@ -121,7 +121,7 @@ function enviarFeedback() {
     // Lógica para enviar o formulário
     // Exemplo de envio assíncrono com fetch API ou XMLHttpRequest
 
-    mensagemFeedback.textContent = 'Enviando...';
+    mensagemFeedback.textContent = 'Obrigado pelo Feedback!';
     // Aqui você pode implementar o código para enviar os dados do formulário
 }
 
